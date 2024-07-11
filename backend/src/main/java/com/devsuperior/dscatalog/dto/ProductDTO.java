@@ -16,7 +16,7 @@ public class ProductDTO {
     private Double price;
     private String imgUrl;
     
-    private List<CategoryDTO> list = new ArrayList<>();
+    private List<CategoryDTO> categories = new ArrayList<>();
 
 	public ProductDTO(Long id, String name, Instant date, String description, Double price, String imgUrl) {
 		this.id = id;
@@ -35,7 +35,7 @@ public class ProductDTO {
 		price = entity.getPrice();
 		imgUrl = entity.getImgUrl();
 		for(Category cat : entity.getCategories()) {
-			list.add(new CategoryDTO(cat));
+			categories.add(new CategoryDTO(cat));
 		}
 	}
 
@@ -63,7 +63,7 @@ public class ProductDTO {
 		return imgUrl;
 	}
 
-	public List<CategoryDTO> getList() {
-		return list;
+	public List<CategoryDTO> getCategories() {
+		return categories;
 	}  
 }
