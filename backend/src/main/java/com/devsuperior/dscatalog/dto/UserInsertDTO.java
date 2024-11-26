@@ -2,19 +2,17 @@ package com.devsuperior.dscatalog.dto;
 
 public class UserInsertDTO extends UserDTO{
 
-	private String password;
-	
-	public UserInsertDTO() {
-		super();
-	}
+    private String password;
 
-	public String getPassword() {
-		return password;
-	}
+    public UserInsertDTO(){
+        super();
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	
-	
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
